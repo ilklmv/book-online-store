@@ -25,10 +25,10 @@ const Header: React.FC = () => {
       </nav>
       <div className={styles.profile}>
         <Link href="/profile">
-          <img src="/profile-icon.png" alt="Profile Icon" />
+          <img src="/user.svg" alt="Profile Icon" />
         </Link>
-        <Link href="/cart">
-          <img src="/cart-icon.png" alt="Cart Icon" />
+        <Link href="/shopbag">
+          <img src="/basket.svg" alt="Basket Icon" />
         </Link>
       </div>
     </header>

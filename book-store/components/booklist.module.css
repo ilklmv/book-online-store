@@ -8,7 +8,7 @@
   justify-content: space-between;
   max-width: 100%;
   margin: 0 auto;
-  padding: 20px;
+  padding: 1.25rem;
   font-family: Montserrat;
 }
 
@@ -24,9 +24,9 @@
   height: 45%;
   padding: 5% 25%;
   background-color: #efeef6;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 500;
-  line-height: 15px;
+  line-height: 0.938rem;
   text-align: left;
   color: #1c2a39;
   list-style-type: none;
@@ -79,9 +79,9 @@
   display: -ms-flexbox;
   display: flex;
   width: 40%; /* Ширина каждой книги */
-  margin-bottom: 20px;
+  margin-bottom: 1.25rem;
   background-color: opacity;
-  padding: 10px;
+  padding: 0.625rem;
   -webkit-box-align: start;
   -ms-flex-align: start;
   align-items: flex-start;
@@ -113,9 +113,9 @@
   flex: 1;
   margin: 0.5em 0;
   font-family: Open Sans;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 0.875rem;
   letter-spacing: 0em;
   text-align: left;
   color: #5c6a79;
@@ -126,9 +126,9 @@
   -ms-flex: 1;
   flex: 1;
   font-family: Open Sans;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 0.875rem;
   letter-spacing: 0em;
   text-align: left;
   color: #5c6a79;
@@ -140,9 +140,9 @@
   flex: 1;
   margin: 0.5em 0;
   font-family: Open Sans;
-  font-size: 10px;
+  font-size: 0.625rem;
   font-weight: 400;
-  line-height: 14px;
+  line-height: 0.875rem;
   letter-spacing: 0em;
   text-align: left;
   color: #5c6a79;
@@ -152,12 +152,12 @@
   -webkit-box-flex: 1;
   -ms-flex: 1;
   flex: 1;
-  margin-top: 10px;
+  margin-top: 0.625rem;
   font-weight: bold;
   font-family: Montserrat;
-  font-size: 13px;
+  font-size: 0.813rem;
   font-weight: 700;
-  line-height: 16px;
+  line-height: 1rem;
   letter-spacing: 0em;
   text-align: left;
 }
