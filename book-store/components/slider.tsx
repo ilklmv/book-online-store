@@ -24,13 +24,13 @@ export default function App() {
         }}
       >
         <SwiperSlide>
-          <img src="/cart-icon.png" alt="Cart Icon" />
+          <img className="banner" src="./banner_1.jpg" alt="Banner 1" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/cart-icon.png" alt="Cart Icon" />
+          <img className="banner" src="./banner_2.jpg" alt="Banner 2" />
         </SwiperSlide>
         <SwiperSlide>
-          <img src="/cart-icon.png" alt="Cart Icon" />
+          <img className="banner" src="./banner_3.jpg" alt="Banner 3" />
         </SwiperSlide>
       </Swiper>
     </>

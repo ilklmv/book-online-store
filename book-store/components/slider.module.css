@@ -30,3 +30,9 @@
 .swiper-pagination-bullet-active {
   background-color: #ff4500; /* Цвет активной точки */
 }
+
+.banner {
+  display: flex;
+  justify-content: center;
+  width: 90%;
+}
