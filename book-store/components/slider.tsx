@@ -1,23 +1,32 @@
 import React from "react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
 import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
 
-SwiperCore.use([Navigation, Pagination, Autoplay]);
+import "swiper/css";
+import "swiper/css/pagination";
 
-const Slider: React.FC = () => {
+import "../components/slider.module.css";
+
+import { Pagination } from "swiper/modules";
+
+export default function App() {
   return (
-    <Swiper
-      navigation
-      pagination={{ clickable: true }}
-      autoplay={{ delay: 3000 }}
-    >
-      <SwiperSlide>Slide 1</SwiperSlide>
-      <SwiperSlide>Slide 2</SwiperSlide>
-      <SwiperSlide>Slide 3</SwiperSlide>
-      {/* Add more slides as needed */}
-    </Swiper>
+    <>
+      <Swiper
+        spaceBetween={30}
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+        className="mySwiper"
+        autoplay={{
+          delay: 5000,
+          disableOnInteraction: false,
+        }}
+      >
+        <SwiperSlide>Slide 1</SwiperSlide>
+        <SwiperSlide>Slide 2</SwiperSlide>
+        <SwiperSlide>Slide 3</SwiperSlide>
+      </Swiper>
+    </>
   );
-};
-
-export default Slider;
+}
