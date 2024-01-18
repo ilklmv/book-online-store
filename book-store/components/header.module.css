@@ -1,15 +1,26 @@
 .header {
   display: flex;
+  font-family: Arial, Helvetica, sans-serif;
   justify-content: space-between;
   align-items: center;
   padding: 1rem;
-  background-color: #333;
-  color: #fff;
+  background-color: #fff;
+  color: #000;
+}
+
+.shop_menu {
+  display: flex;
+  width: 25rem;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .profile {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  width: 8rem;
 }
 
 .profile img {

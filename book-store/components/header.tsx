@@ -6,30 +6,29 @@ import styles from "./header.module.css";
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <h1>My Website</h1>
+      <h1>Bookshop</h1>
       <nav>
-        <ul>
+        <ul className={styles.shop_menu}>
           <li>
-            <Link href="/">
-              <a>Home</a>
-            </Link>
+            <Link href="/">Books</Link>
           </li>
           <li>
-            <Link href="/profile">
-              <a>Profile</a>
-            </Link>
+            <Link href="/audiobooks">Audiobooks</Link>
           </li>
           <li>
-            <Link href="/cart">
-              <a>Cart</a>
-            </Link>
+            <Link href="/stationery&gifts">Stationery & Gifts</Link>
+          </li>
+          <li>
+            <Link href="/blog">Blog</Link>
           </li>
         </ul>
       </nav>
       <div className={styles.profile}>
-        <img src="/profile-icon.png" alt="Profile Icon" />
         <Link href="/profile">
-          <a>My Profile</a>
+          <img src="/profile-icon.png" alt="Profile Icon" />
+        </Link>
+        <Link href="/cart">
+          <img src="/cart-icon.png" alt="Cart Icon" />
         </Link>
       </div>
     </header>

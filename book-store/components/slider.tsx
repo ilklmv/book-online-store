@@ -23,9 +23,15 @@ export default function App() {
           disableOnInteraction: false,
         }}
       >
-        <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
+        <SwiperSlide>
+          <img src="/cart-icon.png" alt="Cart Icon" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/cart-icon.png" alt="Cart Icon" />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src="/cart-icon.png" alt="Cart Icon" />
+        </SwiperSlide>
       </Swiper>
     </>
   );
