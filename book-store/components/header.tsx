@@ -6,29 +6,44 @@ import styles from "./header.module.css";
 const Header: React.FC = () => {
   return (
     <header className={styles.header}>
-      <h1>Bookshop</h1>
+      <h1 className={styles.title}>Bookshop</h1>
       <nav>
         <ul className={styles.shop_menu}>
           <li>
-            <Link href="/">Books</Link>
+            <Link href="/">BOOKS</Link>
           </li>
           <li>
-            <Link href="/audiobooks">Audiobooks</Link>
+            <Link href="/audiobooks">AUDIOBOOKS</Link>
           </li>
           <li>
-            <Link href="/stationery&gifts">Stationery & Gifts</Link>
+            <Link href="/stationery&gifts">STATIONERY & GIFTS</Link>
           </li>
           <li>
-            <Link href="/blog">Blog</Link>
+            <Link href="/blog">BLOG</Link>
           </li>
         </ul>
       </nav>
-      <div className={styles.profile}>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "space-between",
+          width: "3rem",
+        }}
+      >
         <Link href="/profile">
-          <img src="/user.svg" alt="Profile Icon" />
+          <img
+            src="/user.svg"
+            alt="Profile Icon"
+            style={{ width: "12px", height: "15px" }}
+          />
         </Link>
-        <Link href="/shopbag">
-          <img src="/basket.svg" alt="Basket Icon" />
+        <Link href="/cart">
+          <img
+            src="/shop bag.svg"
+            alt="Basket Icon"
+            style={{ width: "12px", height: "15px" }}
+          />
         </Link>
       </div>
     </header>

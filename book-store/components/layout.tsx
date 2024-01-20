@@ -7,17 +7,18 @@ import BookList from "./booklist";
 
 interface LayoutProps {
   children: React.ReactNode;
+  showBookList?: boolean;
 }
 
-const Layout: React.FC<LayoutProps> = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children, showBookList = true }) => {
   return (
     <div className={styles.layout}>
       <Head>
-        <title>Your Website Title</title>
+        <title>BOOKSHOP</title>
       </Head>
       <Header />
       <main>{children}</main>
-      <BookList />
+      {showBookList && <BookList />}
     </div>
   );
 };

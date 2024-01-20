@@ -20,8 +20,8 @@
 
 .category_list {
   z-index: 0;
-  width: 50%;
-  height: 45%;
+  width: 80%;
+  height: 20rem;
   padding: 5% 25%;
   background-color: #efeef6;
   font-size: 0.75rem;
@@ -40,6 +40,7 @@
 
 .category_list li {
   margin-bottom: 1em;
+  cursor: pointer;
 }
 
 .category_list li.active {
@@ -69,7 +70,7 @@
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
   -ms-flex-pack: distribute;
-  justify-content: space-around;
+  justify-content: space-between;
   padding: 1em 0em;
   margin-left: -15%;
 }
@@ -187,8 +188,9 @@
 }
 
 .load_more {
-  height: 5em;
+  display: block;
   margin: 0 auto;
+  height: 5em;
   background-color: #ffffff;
   color: #4c3db2;
   border: 1px solid #4c3db2;

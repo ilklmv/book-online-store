@@ -18,8 +18,14 @@
 
 @font-face {
   font-family: "Montserrat";
-  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf")
-    format("truetype");
+  src: url("../public/fonts/Montserrat-VariableFont_wght.ttf");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Open Sans";
+  src: url("../public/fonts/OpenSans-VariableFont_wdth\,wght.ttf");
   font-weight: normal;
   font-style: normal;
 }
@@ -27,4 +33,6 @@
 body {
   color: rgb(var(--foreground-rgb));
   background: #fff;
+  width: 80%;
+  margin: 0 auto;
 }

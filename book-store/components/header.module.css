@@ -6,6 +6,17 @@
   padding: 1rem;
   background-color: #fff;
   color: #000;
+  margin: 1rem 1rem;
+}
+
+.title {
+  font-family: "Montserrat", sans-serif;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 29px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2a39;
 }
 
 .shop_menu {
@@ -16,16 +27,22 @@
   align-items: center;
 }
 
-.profile {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  width: 8rem;
+.shop_menu li {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #5c6a79;
 }
 
-.profile img {
-  width: 1.875rem;
-  height: 1.875rem;
-  margin-right: 0.5rem;
-  border-radius: 50%;
+.shop_menu li:hover {
+  font-family: "Montserrat", sans-serif;
+  font-size: 10px;
+  font-weight: 900;
+  line-height: 12px;
+  letter-spacing: 0em;
+  text-align: left;
+  color: #1c2a39;
 }

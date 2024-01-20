@@ -23,15 +23,22 @@ export default function App() {
           disableOnInteraction: false,
         }}
       >
-        <SwiperSlide>
-          <img className="banner" src="./banner_1.jpg" alt="Banner 1" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="banner" src="./banner_2.jpg" alt="Banner 2" />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img className="banner" src="./banner_3.jpg" alt="Banner 3" />
-        </SwiperSlide>
+        <div className="banner">
+          <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
+            <img src="./banner_1.jpg" alt="Banner 1" />
+          </SwiperSlide>
+          <SwiperSlide
+            style={{
+              display: "flex",
+              justifyContent: "center",
+            }}
+          >
+            <img src="./banner_2.jpg" alt="Banner 2" />
+          </SwiperSlide>
+          <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
+            <img src="./banner_3.jpg" alt="Banner 3" />
+          </SwiperSlide>
+        </div>
       </Swiper>
     </>
   );

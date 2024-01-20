@@ -4,7 +4,19 @@ import styles from "@/components/booklist.module.css";
 interface Book {
   id: string;
   title: string;
-  // Добавьте другие поля, если необходимо
+  authors?: string[];
+  averageRating?: number;
+  ratingsCount?: number;
+  description?: string;
+  imageLinks?: {
+    thumbnail: string;
+  };
+  saleInfo?: {
+    listPrice: {
+      amount: number;
+      currencyCode: string;
+    };
+  };
 }
 
 const BookList: React.FC = () => {
@@ -41,12 +53,6 @@ const BookList: React.FC = () => {
 
   const loadBooks = async (category: string, index: number) => {
     try {
-      setLoading(true);
-
-      // Ваш код загрузки книг, подобный предыдущему JavaScript-коду
-      // Используйте fetch, axios или другие методы для загрузки данных
-
-      // Пример с fetch:
       const apiKey = "AIzaSyCH4sChyw7m5slJRApx0EyonVpOpBs8Qfk";
       const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&key=${apiKey}&printType=books&startIndex=${index}&maxResults=6&langRestrict=en`;
 
@@ -94,11 +100,34 @@ const BookList: React.FC = () => {
       </div>
       <div className={styles.books}>
         <div className={styles.book_list}>
-          {/* Вывод книг в формате JSX */}
           {books.map((book) => (
             <div key={book.id} className={styles.book_card}>
-              {/* Ваш код для отображения информации о книге */}
-              <h3>{book.title}</h3>
+              <img
+                src={book.imageLinks?.thumbnail || "placeholder.png"}
+                alt={book.title}
+              />
+              <div className={styles.text_info}>
+                <p className={styles.authors}>
+                  {book.authors?.join(", ") || "Unknown"}
+                </p>
+                <h3>{book.title}</h3>
+                <p className={styles.rating}>
+                  {book.averageRating
+                    ? `${book.averageRating} (${book.ratingsCount} ratings)`
+                    : "No ratings available"}
+                </p>
+                <p className={styles.description}>
+                  {book.description
+                    ? `${book.description.substring(0, 150)}...`
+                    : "No description available"}
+                </p>
+                <p className={styles.price}>
+                  {book.saleInfo && book.saleInfo.listPrice
+                    ? `${book.saleInfo.listPrice.amount} ${book.saleInfo.listPrice.currencyCode}`
+                    : "Price not available"}
+                </p>
+                <button className={styles.buy_button}>Buy now</button>
+              </div>
             </div>
           ))}
         </div>
