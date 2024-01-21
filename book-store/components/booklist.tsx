@@ -53,10 +53,8 @@ const BookList: React.FC = () => {
 
   const loadBooks = async (category: string, index: number) => {
     try {
-      const apiKey = "AIzaSyCH4sChyw7m5slJRApx0EyonVpOpBs8Qfk";
-      const apiUrl = `https://www.googleapis.com/books/v1/volumes?q=subject:${category}&key=${apiKey}&printType=books&startIndex=${index}&maxResults=6&langRestrict=en`;
-
-      const response = await fetch(apiUrl);
+      const bffUrl = `/api/books?subject=${category}&page=${Math.ceil((index + 1) / 6)}`;
+      const response = await fetch(bffUrl);
       const data = await response.json();
 
       if (index === 0) {
@@ -65,7 +63,7 @@ const BookList: React.FC = () => {
 
       setBooks((prevBooks) => [
         ...prevBooks,
-        ...data.items.map((item: any) => item.volumeInfo),
+        ...data.data.items.map((item: any) => item.volumeInfo),
       ]);
     } catch (error) {
       console.error(error);
