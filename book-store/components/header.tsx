@@ -1,9 +1,17 @@
 // components/Header.tsx
-import React from "react";
+
+import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
+import AuthPopup from "@/components/authPopup";
 
 const Header: React.FC = () => {
+  const [isAuthPopupVisible, setAuthPopupVisible] = useState(false);
+
+  const handleProfileClick = () => {
+    setAuthPopupVisible(!isAuthPopupVisible);
+  };
+
   return (
     <header className={styles.header}>
       <h1 className={styles.title}>Bookshop</h1>
@@ -23,29 +31,28 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "space-between",
-          width: "3rem",
-        }}
-      >
-        <Link href="/profile">
-          <img
-            src="/user.svg"
-            alt="Profile Icon"
-            style={{ width: "12px", height: "15px" }}
+      <div className={styles.profile_icon_container}>
+        <img
+          src="/user.svg"
+          alt="Profile Icon"
+          className={styles.profile_icon}
+          onClick={handleProfileClick}
+        />
+        {isAuthPopupVisible && (
+          <AuthPopup
+            onLogin={() => {
+              /* Добавьте логику обработки входа */
+            }}
           />
-        </Link>
-        <Link href="/cart">
-          <img
-            src="/shop bag.svg"
-            alt="Basket Icon"
-            style={{ width: "12px", height: "15px" }}
-          />
-        </Link>
+        )}
       </div>
+      <Link href="/cart">
+        <img
+          src="/shop bag.svg"
+          alt="Basket Icon"
+          style={{ width: "12px", height: "15px" }}
+        />
+      </Link>
     </header>
   );
 };
