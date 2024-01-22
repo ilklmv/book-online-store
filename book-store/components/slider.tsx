@@ -1,11 +1,9 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
+import Image from "next/image"; // Импортируем компонент Image из next/image
 import "swiper/css";
 import "swiper/css/pagination";
-
 import "../components/slider.module.css";
-
 import { Pagination } from "swiper/modules";
 
 export default function App() {
@@ -25,7 +23,12 @@ export default function App() {
       >
         <div className="banner">
           <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
-            <img src="./banner_1.jpg" alt="Banner 1" />
+            <Image
+              src="/banner_1.jpg"
+              alt="Banner 1"
+              width={1200}
+              height={500}
+            />
           </SwiperSlide>
           <SwiperSlide
             style={{
@@ -33,10 +36,20 @@ export default function App() {
               justifyContent: "center",
             }}
           >
-            <img src="./banner_2.jpg" alt="Banner 2" />
+            <Image
+              src="/banner_2.jpg"
+              alt="Banner 2"
+              width={1200}
+              height={500}
+            />
           </SwiperSlide>
           <SwiperSlide style={{ display: "flex", justifyContent: "center" }}>
-            <img src="./banner_3.jpg" alt="Banner 3" />
+            <Image
+              src="/banner_3.jpg"
+              alt="Banner 3"
+              width={1200}
+              height={500}
+            />
           </SwiperSlide>
         </div>
       </Swiper>

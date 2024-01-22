@@ -1,9 +1,9 @@
 // components/Header.tsx
-
 import React, { useState } from "react";
 import Link from "next/link";
 import styles from "./header.module.css";
 import AuthPopup from "@/components/authPopup";
+import { montserratFont } from "@/fonts"; // Импортируем шрифт
 
 const Header: React.FC = () => {
   const [isAuthPopupVisible, setAuthPopupVisible] = useState(false);
@@ -13,7 +13,7 @@ const Header: React.FC = () => {
   };
 
   return (
-    <header className={styles.header}>
+    <header className={`${styles.header} ${montserratFont.className}`}>
       <h1 className={styles.title}>Bookshop</h1>
       <nav>
         <ul className={styles.shop_menu}>
