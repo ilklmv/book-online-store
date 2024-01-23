@@ -1,10 +1,11 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import Image from "next/image"; // Импортируем компонент Image из next/image
+import Image from "next/image";
 import "swiper/css";
 import "swiper/css/pagination";
+import "swiper";
 import "../components/slider.module.css";
-import { Pagination } from "swiper/modules";
+import { Pagination, Autoplay } from "swiper/modules";
 
 export default function App() {
   return (
@@ -14,7 +15,7 @@ export default function App() {
         pagination={{
           clickable: true,
         }}
-        modules={[Pagination]}
+        modules={[Pagination, Autoplay]}
         className="mySwiper"
         autoplay={{
           delay: 5000,
