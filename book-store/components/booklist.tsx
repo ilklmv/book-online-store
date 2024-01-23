@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import styles from "@/components/booklist.module.css";
+import Image from "next/image";
 
 interface Book {
   id: string;
@@ -100,6 +101,7 @@ const BookList: React.FC = () => {
         <div className={styles.book_list}>
           {books.map((book) => (
             <div key={book.id} className={styles.book_card}>
+              {/*При попытке заменить изображение на Next/image получаю ошибку*/}
               <img
                 src={book.imageLinks?.thumbnail || "placeholder.png"}
                 alt={book.title}

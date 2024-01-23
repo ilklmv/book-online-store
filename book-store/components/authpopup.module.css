@@ -10,77 +10,77 @@
 }
 
 .auth_popup {
-  max-width: 300px;
-  padding: 20px;
-  border: 1px solid #ccc;
+  max-width: 18.75rem;
+  padding: 1.25rem;
+  border: 0.0625rem solid #ccc;
   background-color: #fff;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.1);
   text-align: center;
 }
 
 .input_container {
-  margin-bottom: 15px;
+  margin-bottom: 0.9375rem;
 }
 
 .title {
   font-family: "Montserrat", sans-serif;
-  font-size: 16px;
+  font-size: 1rem;
   font-weight: 700;
-  line-height: 20px;
+  line-height: 1.25rem;
   letter-spacing: 0em;
   text-align: center;
   color: #1c2a39;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
 }
 
 .label {
   display: block;
-  margin-bottom: 5px;
+  margin-bottom: 0.3125rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 0.9375rem;
   letter-spacing: 0em;
   text-align: left;
 }
 
 .input {
   width: 100%;
-  padding: 8px;
+  padding: 0.5rem;
   box-sizing: border-box;
-  margin-bottom: 10px;
+  margin-bottom: 0.625rem;
   font-family: "Montserrat", sans-serif;
-  font-size: 12px;
+  font-size: 0.75rem;
   font-weight: 700;
-  line-height: 15px;
+  line-height: 0.9375rem;
   letter-spacing: 0em;
   text-align: left;
-  border: 1px solid #4c3db2;
+  border: 0.0625rem solid #4c3db2;
   color: #4c3db2;
 }
 
 .login_button {
   font-family: "Montserrat", sans-serif;
-  font-size: 14px;
+  font-size: 0.875rem;
   font-weight: 700;
-  line-height: 17px;
+  line-height: 1.0625rem;
   letter-spacing: 0em;
   text-align: center;
   background: #9e98dc;
   color: #fff;
-  padding: 10px;
+  padding: 0.625rem;
   border: none;
   cursor: pointer;
   width: 100%;
-  margin-top: 30px;
+  margin-top: 1.875rem;
   text-transform: uppercase;
 }
 
 .error_message {
   font-family: "Montserrat", sans-serif;
-  font-size: 8px;
+  font-size: 0.5rem;
   font-weight: 700;
-  line-height: 10px;
+  line-height: 0.625rem;
   letter-spacing: 0em;
   text-align: center;
   color: #ff353a;

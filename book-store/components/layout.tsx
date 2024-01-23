@@ -15,6 +15,8 @@ const Layout: React.FC<LayoutProps> = ({ children, showBookList = true }) => {
     <div className={styles.layout}>
       <Head>
         <title>BOOKSHOP</title>
+        <meta name="description" content="Bookshop for your reading" />
+        <meta name="author" content="ilklmv" />
       </Head>
       <Header />
       <main>{children}</main>

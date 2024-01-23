@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 import styles from "@/components/profile.module.css";
 
 const ProfilePage: React.FC = () => {
@@ -7,7 +8,12 @@ const ProfilePage: React.FC = () => {
       <h1 className={styles.title}>PROFILE</h1>
       <div className={styles.container}>
         <div className={styles.container_profile}>
-          <img src="./image 1.jpg" alt="Profile Icon" />
+          <Image
+            src="/image_1.jpg"
+            alt="Profile Icon"
+            width={200}
+            height={200}
+          />
           <div className={styles.container_profile_information}>
             <h2 className={styles.profile_header}>YOUR NAME</h2>
             <p className={styles.profile_name}>John Smith</p>
