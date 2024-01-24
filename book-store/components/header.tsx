@@ -7,6 +7,7 @@ import { montserratFont } from "@/fonts"; // Импортируем шрифт
 
 const Header: React.FC = () => {
   const [isAuthPopupVisible, setAuthPopupVisible] = useState(false);
+  const [isProfileHovered, setProfileHovered] = useState(false);
 
   const handleProfileClick = () => {
     setAuthPopupVisible(!isAuthPopupVisible);
@@ -31,7 +32,10 @@ const Header: React.FC = () => {
           </li>
         </ul>
       </nav>
-      <div className={styles.profile_icon_container}>
+      <div
+        className={styles.profile_icon_container}
+        style={{ zIndex: isProfileHovered ? 2 : 1 }}
+      >
         <img
           src="/user.svg"
           alt="Profile Icon"

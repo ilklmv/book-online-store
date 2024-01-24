@@ -40,7 +40,9 @@ const BookList: React.FC = () => {
     "Travel & Maps",
   ]);
 
-  const [activeCategory, setActiveCategory] = useState<string | null>(null);
+  const [activeCategory, setActiveCategory] = useState<string | null>(
+    "Architecture",
+  );
   const [books, setBooks] = useState<Book[]>([]);
   const [startIndex, setStartIndex] = useState(0);
   const [loading, setLoading] = useState(false);
@@ -54,6 +56,7 @@ const BookList: React.FC = () => {
 
   const loadBooks = async (category: string, index: number) => {
     try {
+      setLoading(true);
       const bffUrl = `/api/books?subject=${category}&page=${Math.ceil((index + 1) / 6)}`;
       const response = await fetch(bffUrl);
       const data = await response.json();
