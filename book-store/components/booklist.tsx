@@ -46,6 +46,7 @@ const BookList: React.FC = () => {
   const [books, setBooks] = useState<Book[]>([]);
   const [startIndex, setStartIndex] = useState(0);
   const [loading, setLoading] = useState(false);
+  const [cart, setCart] = useState<Book[]>([]);
 
   useEffect(() => {
     // Загрузка книг при монтировании компонента
@@ -79,6 +80,10 @@ const BookList: React.FC = () => {
   const handleCategoryClick = (category: string) => {
     setActiveCategory(category);
     setStartIndex(0); // Сброс индекса при выборе новой категории
+  };
+
+  const handleBuyNowClick = (book: Book) => {
+    setCart((prevCart) => [...prevCart, book]);
   };
 
   const handleLoadMoreClick = () => {
@@ -129,7 +134,12 @@ const BookList: React.FC = () => {
                     ? `${book.saleInfo.listPrice.amount} ${book.saleInfo.listPrice.currencyCode}`
                     : "Price not available"}
                 </p>
-                <button className={styles.buy_button}>Buy now</button>
+                <button
+                  className={styles.buy_button}
+                  onClick={() => handleBuyNowClick(book)}
+                >
+                  Buy now
+                </button>
               </div>
             </div>
           ))}

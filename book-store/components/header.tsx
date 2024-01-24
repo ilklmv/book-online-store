@@ -36,19 +36,21 @@ const Header: React.FC = () => {
         className={styles.profile_icon_container}
         style={{ zIndex: isProfileHovered ? 2 : 1 }}
       >
-        <img
-          src="/user.svg"
-          alt="Profile Icon"
-          className={styles.profile_icon}
-          onClick={handleProfileClick}
-        />
-        {isAuthPopupVisible && (
-          <AuthPopup
-            onLogin={() => {
-              /* Добавьте логику обработки входа */
-            }}
+        <Link href="/profile">
+          <img
+            src="/user.svg"
+            alt="Profile Icon"
+            className={styles.profile_icon}
+            onClick={handleProfileClick}
           />
-        )}
+          {isAuthPopupVisible && (
+            <AuthPopup
+              onLogin={() => {
+                /* Добавьте логику обработки входа */
+              }}
+            />
+          )}
+        </Link>
       </div>
       <Link href="/cart">
         <img

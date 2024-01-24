@@ -9,7 +9,7 @@ const ProfilePage: React.FC = () => {
       <div className={styles.container}>
         <div className={styles.container_profile}>
           <Image
-            src="/image_1.jpg"
+            src="/image 1.jpg"
             alt="Profile Icon"
             width={200}
             height={200}
